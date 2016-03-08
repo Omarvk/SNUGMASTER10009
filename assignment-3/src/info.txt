@@ -1,0 +1,26 @@
+$scope.onAddSeller = function onAddSeller() {
+	var peterSellers = {
+		name: "Peter Sellers",
+		category: "Movies",
+		imagePath: "link"
+	};
+	
+	appResource.addSeller(peterSellers).sucess(function(seller) {
+		var newSeller = seller;
+	}).error(function() {
+		//TODO VILLUR
+	});
+}
+	var nextID = 5;
+	
+	sellertID = nextID++;
+	
+	
+	toastr
+	
+	
+	languages.js í gulp
+	
+	product vera sem directive
+	alert í bootstrap
+	modal bootstrap
