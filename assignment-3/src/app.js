@@ -8,6 +8,9 @@ function($routeProvider, $translateProvider) {
 	$routeProvider.when("/", {
 		controller: "SellersController",
 		templateUrl: "components/sellers/index.html"
+	}).when("/seller-details/:id", {
+		controller: "SellerDetailsController",
+		templateUrl: "components/seller-details/seller-details.html"
 	});
 	$translateProvider.useStaticFilesLoader({
 		prefix: "lang_",

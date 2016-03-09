@@ -4,6 +4,7 @@ angular.module("project3App").controller("SellerDlgController",
 function SellerDlgController($scope) {
 
 	$scope.seller = {
+		id:         "",
 		name: 		"",
 		category: 	"",
 		imagePath: 	""
