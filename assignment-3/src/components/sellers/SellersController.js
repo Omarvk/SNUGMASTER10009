@@ -22,7 +22,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 			AppResource.addSeller(seller).success(function(seller) {
 				console.log("tókst");
 				//var newSeller = seller;
-				$scope.sellers.push(seller);
+				//$scope.sellers.push(seller);
 				// TODO: BÆTA VIÐ SELJANDA í listann
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
