@@ -16,13 +16,17 @@
 			</th>
 			<th translate="sellers.Category">Category</th>
 		</thead>
-
 		<tbody>
-			<tr ng-repeat="s in sellers">
-				<td>{{s.name}}</td>
+			<tr ng-repeat="s in sellers track by s.id">
+				<td><a ng-href="#/seller-details/{{s.id}}">{{s.name}}</a></td>
 				<td>{{s.category}}</td>
 			</tr>
 		</tbody>
 		<tr></tr>
 	</table>
 </div>
+
+
+
+
+		
