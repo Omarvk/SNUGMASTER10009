@@ -42,8 +42,8 @@ function AppResource() {
 		createSeller(3, "Sælgætisgerð Sjonna og Súsí", "Matvörur", "http://i.imgur.com/IuL474x.jpg"),
 		createSeller(4, "Leirkeraverkstæði Lomma", "Keramik", "https://upload.wikimedia.org/wikipedia/commons/6/67/Potter_at_work,_Jaura,_India.jpg")
 	];
-	var nextID = 1337;
-
+	
+	var nextID = 5;
 	var mockProducts = [
 		createProduct(1,  1, "Ullarvettlingar",  1899, 500, 12, "http://i.imgur.com/MZOmRnH.jpg"),
 		createProduct(1,  2, "Ullarsokkar",      2199, 488,  9, "http://i.imgur.com/0XKznD4.jpg?1"),
@@ -79,7 +79,7 @@ function AppResource() {
 					fn(data);
 				}
 				return {
-					error: function f() {
+					error: function (f) {
 						if (!condition) {
 							f();
 						}
@@ -139,10 +139,10 @@ function AppResource() {
 					break;
 				}
 			}
-
 			if (seller) {
 				return mockHttpPromise(mockResource.successLoadSellerDetails, seller);
 			} else {
+				console.log("warning");
 				return mockHttpPromise(false, null);
 			}
 		},
