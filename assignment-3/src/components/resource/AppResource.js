@@ -142,13 +142,13 @@ function AppResource() {
 			if (seller) {
 				return mockHttpPromise(mockResource.successLoadSellerDetails, seller);
 			} else {
-				console.log("warning");
 				return mockHttpPromise(false, null);
 			}
 		},
 
 		getSellerProducts: function getSellerProducts(id) {
 			var products = [];
+			console.log(id+ " sada ");
 			for (var i = 0; i < mockProducts.length; ++i) {
 				if (mockProducts[i].id === id) {
 					products.push(mockProducts[i].product);

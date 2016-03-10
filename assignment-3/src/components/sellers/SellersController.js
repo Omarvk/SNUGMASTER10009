@@ -20,7 +20,8 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller) {
 			AppResource.addSeller(seller).success(function(seller) {
-				console.log("tókst");
+				//toastr.success("tókst", "bæta við!");
+				centrisNotify.success("sellers.Messages.SaveSucceeded","sellers.Add");
 				//var newSeller = seller;
 				//$scope.sellers.push(seller);
 				// TODO: BÆTA VIÐ SELJANDA í listann

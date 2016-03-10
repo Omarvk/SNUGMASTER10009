@@ -63,8 +63,8 @@ function(toastr, toastrConfig, $translate, $rootScope) {
 
 		// In case the previous toast was an undo toast,
 		// which overrode the template path:
-		toastrConfig.templates.toast = "components/centris-notify/centris-notify.tpl.html";
-
+		toastrConfig.templates.toast = "shared/notify/centris-notify.tpl.html";
+		//"components/centris-notify/centris-notify.tpl.html";
 		if (type === "success") {
 			toastr.success(message, title, options);
 		} else if (type === "error") {
@@ -76,7 +76,6 @@ function(toastr, toastrConfig, $translate, $rootScope) {
 	var notificationFunction = function notificationFunction(type, titleKey, messageKey) {
 		var message = $translate.instant(messageKey);
 		var title   = defaultTitle;
-
 		if (titleKey !== undefined) {
 			title = $translate.instant(titleKey);
 		}
