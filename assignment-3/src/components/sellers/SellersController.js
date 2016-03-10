@@ -6,11 +6,6 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 	// add/update sellers etc.
 	$scope.isLoading = true;
 	AppResource.getSellers().success(function(sellers) {
-		for(var s in sellers) {
-			if(sellers.hasOwnProperty(s)) {
-				console.log(s + " " + sellers[s].name+ " " + sellers[s].id);
-			}
-		}
 		$scope.sellers = sellers;
 		$scope.isLoading = false;
 	}).error(function()	{

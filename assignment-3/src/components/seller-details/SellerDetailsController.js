@@ -14,9 +14,10 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 		centrisNotify.error("sellerdetails.Messages.LoadFailed"); // json skráinn
 	});
 	$scope.onAddProduct = function onAddProduct() {
-		SellerDetailDlg.show().then(function(product) {
-			AppResource.addSellerProduct(product).success(function() {
+		SellerDetailDlg.show().then(function(newProduct) {
+			AppResource.addSellerProduct(newProduct.sId, newProduct.product).success(function(product) {
 				centrisNotify.success("sellerdetails.Messages.SaveSucceeded","sellerdetails.Add");
+				$scope.products.push(product);
 				// TODO: BÆTA VIÐ SELJANDA í listann
 			}).error(function() {
 				centrisNotify.error("sellerdetails.Messages.SaveFailed"); // json skráinn
