@@ -1,14 +1,19 @@
 "use strict";
 
 angular.module("project3App").controller("SellerDlgController", 
-function SellerDlgController($scope) {
-
-	$scope.seller = {
-		id:         "",
-		name: 		"",
-		category: 	"",
-		imagePath: 	""
-	};
+function SellerDlgController($scope, modalParam) {
+	var sellerObj = modalParam.seller;
+	if(sellerObj === undefined) {
+		$scope.seller = {
+			id:         "",
+			name: 		"",
+			category: 	"",
+			imagePath: 	""
+		};
+	}else {
+		$scope.seller = sellerObj;
+	}
+	
 	$scope.onOk = function onOk() {
 		// TODO: VALIDATIOON!! BANK
 		if($scope.seller.name.lenght === 0){

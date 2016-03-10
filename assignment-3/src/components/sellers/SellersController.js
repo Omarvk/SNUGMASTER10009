@@ -17,19 +17,22 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 			AppResource.addSeller(seller).success(function(seller) {
 				//toastr.success("tókst", "bæta við!");
 				centrisNotify.success("sellers.Messages.SaveSucceeded","sellers.Add");
-				//var newSeller = seller;
-				//$scope.sellers.push(seller);
-				// TODO: BÆTA VIÐ SELJANDA í listann
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
 			});
 		});
-		/*var peterSellers = {
-			name: "Peter Sellers",
-			category: "Movies",
-			imagePath: "link"
-		};*/
-		
+
+	};
+	$scope.onEditSeller = function onEditSeller() {
+		SellerDlg.show().then(function(seller) {
+			var id = 1;
+			AppResource.updateSeller(id, seller).success(function(seller) {
+				//toastr.success("tókst", "bæta við!");
+				centrisNotify.success("sellers.Messages.SaveSucceeded","sellers.Add");
+			}).error(function() {
+				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
+			});
+		});
 
 	};
 
