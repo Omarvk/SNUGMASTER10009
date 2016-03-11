@@ -1,12 +1,17 @@
+
 	<h2 class="form-signin-heading" translate="sellersDlg.Title"></h2>
-	<label translate="sellersDlg.Name"></label><input type="text"
-		ng-model="seller.name" /> <!-- validation og meira fun -->
-	<br />
-	<label translate="sellersDlg.Category"></label><input type="text"
-		ng-model="seller.category" />
-	<br />
-	<label translate="sellersDlg.Img">img</label><input type="text"
-		ng-model="seller.imagePath" />
-	<br />
+	<!--<label translate="sellersDlg.Name"></label>-->
+	<input type="text" class="form-control" ng-model="seller.name" placeholder="Nafn" />
+	<!-- validation og meira fun -->
+	<br>
+
+	<!--<label translate="sellersDlg.Category"></label>-->
+	<input type="text" class="form-control" ng-model="seller.category" placeholder="Flokkur" />
+	<br>
+
+	<!--<label translate="sellersDlg.Img"></label>-->
+	<input type="text" class="form-control" ng-model="seller.imagePath" placeholder="Mynd" />
+	<br>
+
 	<button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onOk()" translate="sellersDlg.Ok"></button>
 	<button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onCancel()" translate="sellersDlg.Cancel"></button>
