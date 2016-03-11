@@ -1,34 +1,36 @@
-<div> Hér ætti að birtast listi af seljendum - TODO: útfæra það!</div>
+<div class="Sellers-header" ><h3>Söluaðilar</h3></div>
 <div ng-show="isLoading">
 	<loading-message></loading-message>
 </div>
 
 <div ng-hide="isLoading">
-	<button class="btn btn-primary" ng-click="onAddSeller()">
+	<button class="btn" ng-click="onAddSeller()">
 		<i class="fa fa-plus" />
 		<span translate="sellers.Add" />
 	</button>
-	<button class="btn btn-primary" ng-click="onEditSeller()">
+	<button class="btn" ng-click="onEditSeller()">
 		<i class="fa fa-plus" />
 		<span translate="sellers.Edit" />
 	</button>
-	<table>
-		<thead>
-			<th>
-				<i class="fa fa-plus" />
-				<span translate="sellers.Name" />
-			</th>
-			<th translate="sellers.Category">Category</th>
-		</thead>
-		<tbody>
-			<tr ng-repeat="s in sellers track by s.id">
-				<td><a ng-href="#/seller-details/{{s.id}}">{{s.name}}</a></td>
-				<td>{{s.category}}</td>
-				<td ng-show="edited"><button ng-click="getSeller(s)" translate="sellers.Pick"></button> 
-			</tr>
-		</tbody>
-		<tr></tr>
-	</table>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<th>
+					<i class="fa fa-plus" />
+					<span translate="sellers.Name" />
+				</th>
+				<th translate="sellers.Category">Category</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="s in sellers track by s.id">
+					<td><a ng-href="#/seller-details/{{s.id}}">{{s.name}}</a></td>
+					<td>{{s.category}}</td>
+					<td ng-show="edited"><button ng-click="getSeller(s)" translate="sellers.Pick"></button> 
+				</tr>
+			</tbody>
+			<tr></tr>
+		</table>
+	</div>
 </div>
 
 
