@@ -90,7 +90,7 @@ function(toastr, toastrConfig, $translate, $rootScope) {
 
 		// Slight hack, but hopefully the library will be able to
 		// officcially support per-toast templates in later versions
-		toastrConfig.templates.toast = "components/centris-notify/centris-notify-undo.tpl.html";
+		toastrConfig.templates.toast = "shared/notify/centris-notify.tpl.html";
 
 		// HACK! Because toastr doesn't allow us to pass in
 		// any "Item Data" (see MFC CListCtrl), we need to

@@ -4,11 +4,14 @@
 		"Name":                      "Name",
 		"Category":					 "Category",
 		"Add":						 "Add",
+		"Edit":						 "Edit",
+		"Pick":						 "Pick",
 		"Img":						 "Images",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",
-			"SaveFailed":            "Unfortunately we could not add a new seller"
+			"SaveFailed":            "Unfortunately we could not add a new seller",
+			"UpdateSucceeded":		 "The seller has been updated successfully"
 		}
 	}
 }

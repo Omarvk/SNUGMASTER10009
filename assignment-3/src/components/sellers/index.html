@@ -8,6 +8,10 @@
 		<i class="fa fa-plus" />
 		<span translate="sellers.Add" />
 	</button>
+	<button class="btn btn-primary" ng-click="onEditSeller()">
+		<i class="fa fa-plus" />
+		<span translate="sellers.Edit" />
+	</button>
 	<table>
 		<thead>
 			<th>
@@ -20,6 +24,7 @@
 			<tr ng-repeat="s in sellers track by s.id">
 				<td><a ng-href="#/seller-details/{{s.id}}">{{s.name}}</a></td>
 				<td>{{s.category}}</td>
+				<td ng-show="edited"><button ng-click="getSeller(s)" translate="sellers.Pick"></button> 
 			</tr>
 		</tbody>
 		<tr></tr>
