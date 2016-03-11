@@ -1,10 +1,11 @@
 {
-	"sellers" : {
-		"Title":                     "Seljendur",
+	"sellersDlgDetail" : {
+		"Title":                     "Bæta við vöru",
 		"Name":                      "Nafn",
-		"Category":					 "Flokkur",
-		"Add":						 "Bæta við",
+		"Price":					 "Verð",
 		"Img":						 "Mynd",
+		"Ok":						 "Staðfest",
+		"Cancel":					 "Hætta Við",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",

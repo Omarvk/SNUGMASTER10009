@@ -1,8 +1,16 @@
-<label>name</label><input type="text"
-	ng-model="seller.name" /> <!-- validation og meira fun -->
-<label>category</label><input type="text"
-	ng-model="seller.category" />
-<label>img</label><input type="text"
-	ng-model="seller.imagePath" />
-<button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onOk()">OK</button>
-<button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onCancel()">Cancel</button>
+	
+	<h2 class="form-signin-heading" translate="sellersDlg.Title"></h2>
+	<label translate="sellersDlg.Name"></label><input type="text"
+		ng-model="seller.name" /> <!-- validation og meira fun -->
+	<br />
+	<label translate="sellersDlg.Category"></label><input type="text"
+		ng-model="seller.category" />
+	<br />
+	<label translate="sellersDlg.Img">img</label><input type="text"
+		ng-model="seller.imagePath" />
+	<br />
+	<button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onOk()" translate="sellersDlg.Ok"></button>
+	<button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onCancel()" translate="sellersDlg.Cancel"></button>
+
+
+

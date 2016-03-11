@@ -16,11 +16,13 @@ function SellerDetailDlgController($scope, $routeParams) {
 	
 	$scope.onOk = function onOk() {
 		// TODO: VALIDATIOON!! BANK
-		if($scope.newProduct.product.name.lenght === 0) {
+		if($scope.newProduct.product.name.length === 0) {
 			//birta valdiation skilaboð!!!
 			return;
+		}else {
+			$scope.$close($scope.newProduct);
 		}
-		$scope.$close($scope.newProduct);
+		
 	};
 	$scope.onCancel = function onCancel() {
 		$scope.$dismiss();
