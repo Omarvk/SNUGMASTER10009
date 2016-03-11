@@ -8,9 +8,7 @@ function productTab(AppResource, $routeParams) {
 		templateUrl: "components/products-tab/productsTab.html",
 		link: function(scope, element, attrs) {
 			var id = $routeParams.id;
-			console.log(id + " id");
 			AppResource.getSellerProducts(Number(id)).success(function(products) {
-				console.log("tókstyeaa");
 				scope.products = products;
 			}).error(function() {
 				// error

@@ -1,10 +1,11 @@
 {
-	"sellers" : {
-		"Title":                     "Sellers List",
+	"sellersDlgDetail" : {
+		"Title":                     "Add a product",
 		"Name":                      "Name",
-		"Category":					 "Category",
-		"Add":						 "Add",
+		"Price":					 "Price",
 		"Img":						 "Images",
+		"Ok":						 "Ok",
+		"Cancel":					 "Cancel",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",

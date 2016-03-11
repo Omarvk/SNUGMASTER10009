@@ -1,10 +1,6 @@
 {
-	"sellers" : {
-		"Title":                     "Sellers List",
-		"Name":                      "Name",
-		"Category":					 "Category",
-		"Add":						 "Add",
-		"Img":						 "Images",
+	"shared" : {
+		"LoadingMessage":            "Loading",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",
