@@ -4,6 +4,7 @@ angular.module("project3App").controller("SellerDetailsController",
 ["$scope", "$routeParams", "AppResource", "centrisNotify", "SellerDetailDlg",
 function SellerDetailsController($scope, $routeParams, AppResource, centrisNotify, SellerDetailDlg) {
 	var id = $routeParams.id;
+	$scope.tabs = true;
 	AppResource.getSellerDetails(Number(id)).success(function(seller){
 		$scope.id = seller.id;
 		$scope.name = seller.name;
@@ -24,6 +25,23 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 			});
 		});
 	};
+	$scope.onCheckTab = function onCheckTab() {
+		console.log("wadasda");
+		if($scope.tabs === true) {
+			$scope.tabs = false;
+		}else {
+			$scope.tabs = true;
+		}
+ 	};
+	/*SellerDetailDlg.show(product).then(function(product) {
+		AppResource.updateSeller(Number(product.sId), product).success(function(product) {
+			//toastr.success("tókst", "bæta við!");
+			centrisNotify.successWithUndo("sellers.Messages.UpdateSucceeded", seller.name);
+		}).error(function() {
+			centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
+		});
+	});*/	
+
 
 }]);
 

@@ -8,5 +8,11 @@
 	</button>
 </div>
 <div>
+<button class="btn" ng-click="onCheckTab()">tabs</button>
+</div>
+<div ng-show="tabs">
 	<product-Tab></product-Tab>
+</div>
+<div ng-hide="tabs">
+	<product-Top></product-Top>
 </div>

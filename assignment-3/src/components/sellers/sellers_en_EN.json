@@ -1,5 +1,6 @@
 {
 	"sellers" : {
+		"HeadTitle":				 "Sellers",
 		"Title":                     "Sellers List",
 		"Name":                      "Name",
 		"Category":					 "Category",

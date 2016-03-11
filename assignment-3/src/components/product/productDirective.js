@@ -1,9 +1,9 @@
 "use strict";
 
-angular.module("project3App").directive("product", 
-function product() {
+angular.module("project3App").directive("getProduct", 
+function getProduct() {
 	return {
 		restrict: "E",
-		templateUrl: "components/Product/product.html"
+		templateUrl: "components/product/product.html"
 	};
 });
