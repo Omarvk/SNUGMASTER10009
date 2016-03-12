@@ -33,14 +33,16 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 			$scope.tabs = true;
 		}
  	};
-	/*SellerDetailDlg.show(product).then(function(product) {
-		AppResource.updateSeller(Number(product.sId), product).success(function(product) {
-			//toastr.success("tókst", "bæta við!");
-			centrisNotify.successWithUndo("sellers.Messages.UpdateSucceeded", seller.name);
-		}).error(function() {
-			centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
+ 	$scope.onEditProduct = function onEditProduct(product) {
+		SellerDetailDlg.show(product).then(function(product) {
+			AppResource.updateSeller(Number(product.id), product).success(function(product) {
+				//toastr.success("tókst", "bæta við!");
+				centrisNotify.successWithUndo("sellers.Messages.UpdateSucceeded", product.name);
+			}).error(function() {
+				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
+			});
 		});
-	});*/	
+	};
 
 
 }]);

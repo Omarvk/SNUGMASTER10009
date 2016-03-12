@@ -1,12 +1,21 @@
-<h2 class="form-signin-heading" translate="sellersDlgDetail.Title"></h2>
+<h2 class="form-signin-heading" translate="{{title}}"></h2>
 <label translate="sellersDlgDetail.Name"></label><input type="text"
 	ng-model="newProduct.product.name" /> <!-- validation og meira fun -->
 </br>
 <label translate="sellersDlgDetail.Price"></label><input type="text"
 	ng-model="newProduct.product.price" />
 </br>
+<label translate="sellersDlgDetail.QuantitySold"></label><input type="text"
+	ng-model="newProduct.product.quantitySold" /> <!-- validation og meira fun -->
+</br>
+<label translate="sellersDlgDetail.QuantityInStock"></label><input type="text"
+	ng-model="newProduct.product.quantityInStock" />
+</br>
 <label translate="sellersDlgDetail.Img"></label><input type="text"
 	ng-model="newProduct.product.imagePath" />
 </br>
 <button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onOk()" translate="sellersDlgDetail.Ok"></button>
 <button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onCancel()" translate="sellersDlgDetail.Cancel"></button>
+
+
+

@@ -1,6 +1,7 @@
 {
 	"sellersDlg" : {
 		"Title":                     "Add a seller",
+		"EditTitle":				 "Edit seller",
 		"Name":                      "Name",
 		"Category":					 "Category",
 		"Add":						 "Add",

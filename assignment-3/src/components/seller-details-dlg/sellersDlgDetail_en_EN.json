@@ -1,9 +1,12 @@
 {
 	"sellersDlgDetail" : {
 		"Title":                     "Add a product",
+		"EditTitle":				 "Edit product",
 		"Name":                      "Name",
 		"Price":					 "Price",
 		"Img":						 "Images",
+		"QuantitySold":              "QuantitySold",
+		"QuantityInStock":			 "QuantityInStock",
 		"Ok":						 "Ok",
 		"Cancel":					 "Cancel",
 		"Messages" : {
@@ -13,3 +16,6 @@
 		}
 	}
 }
+
+
+

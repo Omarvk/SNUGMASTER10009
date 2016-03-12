@@ -1,6 +1,7 @@
 {
 	"sellersDlg" : {
 		"Title":                     "Bæta við seljanda",
+		"EditTitle":				 "Breyta seljanda",
 		"Name":                      "Nafn",
 		"Category":					 "Flokkur",
 		"Add":						 "Bæta við",

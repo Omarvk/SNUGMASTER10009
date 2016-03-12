@@ -1,9 +1,12 @@
 {
 	"sellersDlgDetail" : {
 		"Title":                     "Bæta við vöru",
+		"EditTitle":				 "Breyta vöru",
 		"Name":                      "Nafn",
 		"Price":					 "Verð",
 		"Img":						 "Mynd",
+		"QuantitySold":              "Eintök seld",
+		"QuantityInStock":			 "Eintök til",
 		"Ok":						 "Staðfest",
 		"Cancel":					 "Hætta Við",
 		"Messages" : {

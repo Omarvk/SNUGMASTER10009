@@ -4,6 +4,7 @@ angular.module("project3App").controller("SellerDlgController",
 function SellerDlgController($scope, modalParam) {
 	var sellerObj = modalParam.seller;
 	if(sellerObj === undefined) {
+		$scope.title = "sellersDlg.Title";
 		$scope.seller = {
 			id:         "",
 			name: 		"",
@@ -11,6 +12,7 @@ function SellerDlgController($scope, modalParam) {
 			imagePath: 	""
 		};
 	}else {
+		$scope.title = "sellersDlg.EditTitle";
 		$scope.seller = sellerObj;
 	}
 	

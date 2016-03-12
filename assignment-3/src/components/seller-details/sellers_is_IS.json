@@ -3,6 +3,7 @@
 		"Title":                     "Vörur",
 		"Name":                      "Nafn",
 		"Add":						 "Bæta við",
+		"Category":					 "Flokkur",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir vörur",
 			"SaveSucceeded":         "Nýjum vörum hefur verið bætt við",
