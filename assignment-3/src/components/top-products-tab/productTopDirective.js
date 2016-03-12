@@ -26,14 +26,6 @@ function productTop(AppResource, $routeParams) {
 			}).error(function() {
 				// error
 			});
-			/*scope {
-				pId: "",
-				name: "",
-				price: "",
-				quantitySold "",
-				quantityInStock "";
-				imagePath: "",
-			}*/
 		}
 		//scope: {}; // þitt scope  name: "@" til að ná í scope úr controller
 	};
