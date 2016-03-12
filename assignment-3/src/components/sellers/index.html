@@ -15,14 +15,16 @@
 	<div class="table-responsive">
 		<table class="table table-hover">
 			<thead>
-				<th>
-					<i class="fa fa-plus" />
-					<span translate="sellers.Name" />
-				</th>
-				<th translate="sellers.Category">Category</th>
+				<tr table-sort="name">
+					<th data-columnName="Name">
+						<i class="fa fa-plus" />
+						<span translate="sellers.Name" />
+					</th>
+					<th data-columnName="Name" translate="sellers.Category"></th>
+				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="s in sellers track by s.id">
+				<tr ng-repeat="s in sellers | orderBy:predicate:reverse track by s.id">
 					<td><a ng-href="#/seller-details/{{s.id}}">{{s.name}}</a></td>
 					<td>{{s.category}}</td>
 					<td ng-show="edited"><button ng-click="getSeller(s)" translate="sellers.Pick"></button> 

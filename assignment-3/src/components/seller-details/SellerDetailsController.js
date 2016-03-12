@@ -25,31 +25,9 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 			});
 		});
 	};
-	/*
-	<div>
-	<button class="btn" ng-click="onCheckTab()">tabs</button>
-	</div>
-
-	<div ng-show="tabs">
-		<product-Tab></product-Tab>
-	</div>
-	<div ng-hide="tabs">
-		<product-Top></product-Top>
-	</div>
-	$scope.onCheckTab = function onCheckTab() {
-		if($scope.tabs === true) {
-			$scope.tabs = false;
-		}else {
-			$scope.tabs = true;
-		}
- 	};
- 	*/
- 	$scope.tab = "sellerdetails.Tab";
- 	$scope.topTen = "sellerdetails.TopTen";
  	$scope.onEditProduct = function onEditProduct(product) {
 		SellerDetailDlg.show(product).then(function(newProduct) {
 			AppResource.updateProduct(newProduct.product.id, newProduct.product).success(function(product) {
-				//toastr.success("tókst", "bæta við!");
 				centrisNotify.success("sellerdetails.Messages.UpdateSucceeded", product.id);
 			}).error(function() {
 				centrisNotify.error("sellerdetails.Messages.SaveFailed"); // json skráinn
