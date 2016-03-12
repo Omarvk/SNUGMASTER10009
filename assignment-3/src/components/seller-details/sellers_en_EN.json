@@ -4,6 +4,8 @@
 		"Name":                      "Name",
 		"Add":						 "Add",
 		"Category":					 "Category",
+		"Tab":						 "Product Tab",
+		"TopTen":					 "Top 10 Product",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of product",
 			"SaveSucceeded":         "The product has been added successfully",

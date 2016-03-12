@@ -9,20 +9,22 @@
 		</button>
 	</div>
 	<div class="Seller-details-info">
-		<label translate="sellersDlg.Name">:</label>
+		<label translate="sellerdetails.Name">:</label>
 		<p>{{name}}</p>
-		<label translate="sellersDlg.Category">:</label>
+		<label translate="sellerdetails.Category">:</label>
 		<p>{{category}} </p>
 	</div>
 </div>
 
 
-<div>
-<button class="btn" ng-click="onCheckTab()">tabs</button>
-</div>
-<div ng-show="tabs">
-	<product-Tab></product-Tab>
-</div>
-<div ng-hide="tabs">
-	<product-Top></product-Top>
-</div>
+<form name="outerForm" class="tab-from-demo">
+	<uib-tabset active="activeForm">
+		<uib-tab index="0" heading="{{tab}}">
+			<product-Tab></product-Tab>
+		</uib-tab>
+		<uib-tab index="1" heading="{{topTen}}">
+			<product-Top></product-Top>
+		</uib-tab>
+	<uib-tabset>
+</form>
+

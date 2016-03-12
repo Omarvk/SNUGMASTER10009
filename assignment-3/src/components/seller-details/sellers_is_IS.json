@@ -4,6 +4,8 @@
 		"Name":                      "Nafn",
 		"Add":						 "Bæta við",
 		"Category":					 "Flokkur",
+		"Tab":						 "Vörur",
+		"TopTen":					 "Topp 10 Vörur",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir vörur",
 			"SaveSucceeded":         "Nýjum vörum hefur verið bætt við",
