@@ -1,12 +1,22 @@
-<div>
-	<p>{{name}}</p>
-	<p>{{category}}</p>
-	<img src="{{img}}"></img>
-	<button class="btn btn-primary" ng-click="onAddProduct()">
-		<i class="fa fa-plus" />
-		<span translate="sellerdetails.Add" />
-	</button>
+<div class="Seller-details panel panel-default">
+	<div class="Seller-details-img">
+		<img height="175px" width="280px" class="img-rounded" src="{{img}}" alt="Seller image"></img>
+	</div>
+	<div class="Seller-details-add">
+		<button class="btn btn-default" ng-click="onAddProduct()">
+			<i class="fa fa-plus" />
+			<span translate="sellerdetails.Add" />
+		</button>
+	</div>
+	<div class="Seller-details-info">
+		<label translate="sellersDlg.Name">:</label>
+		<p>{{name}}</p>
+		<label translate="sellersDlg.Category">:</label>
+		<p>{{category}} </p>
+	</div>
 </div>
+
+
 <div>
 <button class="btn" ng-click="onCheckTab()">tabs</button>
 </div>
