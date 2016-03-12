@@ -4,7 +4,7 @@
 		"Name":                      "Name",
 		"Add":						 "Add",
 		"Category":					 "Category",
-		"Tab":						 "Product Tab",
+		"Tab":						 "Products",
 		"TopTen":					 "Top 10 Products",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of products",

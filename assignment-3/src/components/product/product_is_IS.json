@@ -1,6 +1,6 @@
 {
 	"product" : {
-		"Name":                      "Nafn:",
+		"Name":						 "Nafn:",
 		"Price":					 "Verð:",
 		"Category":					 "Flokkur:",
 		"Add":						 "Bæta við",
