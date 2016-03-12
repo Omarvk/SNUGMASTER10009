@@ -1,15 +1,15 @@
 <h2 class="form-control-header" translate="{{title}}"></h2>
 <!--<label translate="sellersDlg.Name"></label>-->
-<input type="text" class="form-control" ng-model="seller.name" placeholder="Nafn" />
+<input type="text" class="form-control" ng-model="seller.name" placeholder="{{ 'sellersDlg.Name' | translate }}" />
 <!-- validation og meira fun -->
 <br>
 
 <!--<label translate="sellersDlg.Category"></label>-->
-<input type="text" class="form-control" ng-model="seller.category" placeholder="Flokkur" />
+<input type="text" class="form-control" ng-model="seller.category" placeholder="{{ 'sellersDlg.Category' | translate }}"/>
 <br>
 
 <!--<label translate="sellersDlg.Img"></label>-->
-<input type="text" class="form-control" ng-model="seller.imagePath" placeholder="Mynd" />
+<input type="text" class="form-control" ng-model="seller.imagePath" placeholder="{{ 'sellersDlg.Img' | translate }}" />
 <br>
 
 <button class="btn btn-lg btn btn-default btn-block form-control-button" type="submit" ng-click="onOk()" translate="sellersDlg.Ok"></button>

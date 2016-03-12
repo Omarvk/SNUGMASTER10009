@@ -1,20 +1,20 @@
 <h2 class="form-signin-heading" translate="{{title}}"></h2>
 <!--<label translate="sellersDlgDetail.Name"></label>-->
-<input type="text" ng-model="newProduct.product.name" placeholder="Nafn" class="form-control" />
+<input type="text" ng-model="newProduct.product.name" placeholder="{{ 'sellersDlg.Name' | translate }}" class="form-control" />
 <!-- validation og meira fun -->
 <br>
 <!--<label translate="sellersDlgDetail.Price"></label>-->
-<input type="text" ng-model="newProduct.product.price" placeholder="Verð" class="form-control" />
+<input type="text" ng-model="newProduct.product.price" placeholder="{{ 'sellersDlgDetail.Price' | translate }}" class="form-control" />
 <br>
 <!--<label translate="sellersDlgDetail.QuantitySold"></label>-->
-<input type="text" ng-model="newProduct.product.quantitySold" placeholder="Stykki seld" class="form-control" />
+<input type="text" ng-model="newProduct.product.quantitySold" placeholder="{{ 'sellersDlgDetail.QuantitySold' | translate }}" class="form-control" />
 <!-- validation og meira fun -->
 <br>
 <!--<label translate="sellersDlgDetail.QuantityInStock"></label>-->
-<input type="text" ng-model="newProduct.product.quantityInStock" placeholder="Stykki til" class="form-control" />
+<input type="text" ng-model="newProduct.product.quantityInStock" placeholder="{{ 'sellersDlgDetail.QuantityInStock' | translate }}" class="form-control" />
 <br>
 <!--<label translate="sellersDlgDetail.Img"></label>-->
-<input type="text" ng-model="newProduct.product.imagePath" placeholder="Mynd" class="form-control" />
+<input type="text" ng-model="newProduct.product.imagePath" placeholder="{{ 'sellersDlg.Img' | translate }}" class="form-control" />
 <br>
 <button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onOk()" translate="sellersDlgDetail.Ok"></button>
 <button class="btn btn-lg btn btn-default btn-block" type="submit" ng-click="onCancel()" translate="sellersDlgDetail.Cancel"></button>
