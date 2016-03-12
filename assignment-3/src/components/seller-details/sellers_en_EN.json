@@ -5,12 +5,12 @@
 		"Add":						 "Add",
 		"Category":					 "Category",
 		"Tab":						 "Product Tab",
-		"TopTen":					 "Top 10 Product",
+		"TopTen":					 "Top 10 Products",
 		"Messages" : {
-			"LoadFailed":            "Failed to load the list of product",
+			"LoadFailed":            "Failed to load the list of products",
 			"SaveSucceeded":         "The product has been added successfully",
 			"SaveFailed":            "Unfortunately we could not add a new product",
-			"UpdateSucceeded":		 "the product has been successfully updated"
+			"UpdateSucceeded":		 "The product has been successfully updated"
 		}
 	}
 }

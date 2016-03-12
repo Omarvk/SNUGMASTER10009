@@ -1,12 +1,14 @@
-<div class="well well-lg" ng-click="onEditProduct(p)">
-	<img width="100" height="100" ng-src="{{p.imagePath}}"></img>
-	<lable>Nafn: </label>{{p.name}}
-	</br> 
-	<lable>Verð: </label>{{p.price}}
-	</br>
-    <lable>Stykki seld: </label>{{p.quantitySold}}
-    </br> 
-    <lable>Stykki til: </label>{{p.quantityInStock}}
+<div class="well well-lg Product-details" ng-click="onEditProduct(p)">
+	<div class="Product-details-img">
+		<img width="100" height="100" ng-src="{{p.imagePath}}"></img>
+	</div>
+	<div class="Product-details-info">
+		<label translate="product.Name"></label>&nbsp{{p.name}}
+		<br> 
+		<label translate="product.Price"></label>&nbsp{{p.price}}.-
+		<br>
+		<label translate="product.QuantitySold"></label>&nbsp{{p.quantitySold}}
+		<br> 
+		<label translate="product.QuantityInStock"></label>&nbsp{{p.quantityInStock}}
+	</div>
 </div>
-
-
