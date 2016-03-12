@@ -5,9 +5,10 @@
 		"Add":						 "Add",
 		"Category":					 "Category",
 		"Messages" : {
-			"LoadFailed":            "Failed to load the list of sellers",
-			"SaveSucceeded":         "The seller has been added successfully",
-			"SaveFailed":            "Unfortunately we could not add a new seller"
+			"LoadFailed":            "Failed to load the list of product",
+			"SaveSucceeded":         "The product has been added successfully",
+			"SaveFailed":            "Unfortunately we could not add a new product",
+			"UpdateSucceeded":		 "the product has been successfully updated"
 		}
 	}
 }

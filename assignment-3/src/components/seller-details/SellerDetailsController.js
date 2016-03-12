@@ -34,12 +34,12 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 		}
  	};
  	$scope.onEditProduct = function onEditProduct(product) {
-		SellerDetailDlg.show(product).then(function(product) {
-			AppResource.updateSeller(Number(product.id), product).success(function(product) {
+		SellerDetailDlg.show(product).then(function(newProduct) {
+			AppResource.updateProduct(newProduct.product.id, newProduct.product).success(function(product) {
 				//toastr.success("tókst", "bæta við!");
-				centrisNotify.successWithUndo("sellers.Messages.UpdateSucceeded", product.name);
+				centrisNotify.success("sellerdetails.Messages.UpdateSucceeded", product.id);
 			}).error(function() {
-				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
+				centrisNotify.error("sellerdetails.Messages.SaveFailed"); // json skráinn
 			});
 		});
 	};

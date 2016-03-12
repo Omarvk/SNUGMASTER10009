@@ -33,7 +33,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 		SellerDlg.show(seller).then(function(seller) {
 			AppResource.updateSeller(Number(seller.id), seller).success(function(seller) {
 				//toastr.success("tókst", "bæta við!");
-				centrisNotify.successWithUndo("sellers.Messages.UpdateSucceeded", seller.name);
+				centrisNotify.success("sellers.Messages.UpdateSucceeded", "sellers.Edit");
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
 			});
