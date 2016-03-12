@@ -7,7 +7,7 @@
 		"Img":						 "Mynd",
 		"QuantitySold":              "Eintök seld",
 		"QuantityInStock":			 "Eintök til",
-		"Ok":						 "Staðfest",
+		"Ok":						 "Staðfesta",
 		"Cancel":					 "Hætta Við",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
