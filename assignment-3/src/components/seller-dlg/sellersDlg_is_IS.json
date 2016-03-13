@@ -8,6 +8,8 @@
 		"Img":						 "Mynd",
 		"Ok":						 "Staðfesta",
 		"Cancel":					 "Hætta við",
+		"ValidationFailedName":		 "Vinsamlegast sláðu inn nafn á seljanda.",
+		"ValidationFailedCategory":	 "Vinsamlegast sláðu inn flokk seljanda.",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",

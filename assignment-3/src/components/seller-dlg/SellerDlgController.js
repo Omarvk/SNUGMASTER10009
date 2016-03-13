@@ -17,11 +17,15 @@ function SellerDlgController($scope, modalParam) {
 	}
 	
 	$scope.onOk = function onOk() {
-		// TODO: VALIDATIOON!! BANK
 		if($scope.seller.name.length === 0){
-			//birta valdiation skilaboð!!!
+			$scope.Input-validation-name = true;
 			return;
-		}else {
+		}
+		if($scope.seller.category.length === 0) {
+			$scope.Input-validation-category = true;
+			return;
+		}
+		else {
 			$scope.$close($scope.seller);
 		}
 		

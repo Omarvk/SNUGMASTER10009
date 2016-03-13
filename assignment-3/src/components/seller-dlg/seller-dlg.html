@@ -4,9 +4,17 @@
 <!-- validation og meira fun -->
 <br>
 
+<div class="well errormsg" ng-show="Input-validation-name">
+	<label translate="sellersDlg.ValidationFailedName"></label>
+</div>
+
 <!--<label translate="sellersDlg.Category"></label>-->
 <input type="text" class="form-control" ng-model="seller.category" placeholder="{{ 'sellersDlg.Category' | translate }}" />
 <br>
+
+<div class="well errormsg" ng-show="Input-validation-category">
+	<label translate="sellersDlg.ValidationFailedCategory"></label>
+</div>
 
 <!--<label translate="sellersDlg.Img"></label>-->
 <input type="text" class="form-control" ng-model="seller.imagePath" placeholder="{{ 'sellersDlg.Img' | translate }}" />

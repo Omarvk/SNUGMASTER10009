@@ -5,8 +5,8 @@
 		"Name":                      "Name",
 		"Price":					 "Price",
 		"Img":						 "Images",
-		"QuantitySold":              "QuantitySold",
-		"QuantityInStock":			 "QuantityInStock",
+		"QuantitySold":              "Quantity sold",
+		"QuantityInStock":			 "Quantity in stock",
 		"Ok":						 "Ok",
 		"Cancel":					 "Cancel",
 		"Messages" : {
