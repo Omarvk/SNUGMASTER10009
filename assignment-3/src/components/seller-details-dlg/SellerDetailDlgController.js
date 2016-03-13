@@ -23,19 +23,28 @@ function SellerDetailDlgController($scope, $routeParams, modalParam) {
 	}
 	
 	$scope.onOk = function onOk() {
-		if($scope.newProduct.product.name.length === 0 && $scope.newProduct.product.price.length === 0) {
+		if($scope.newProduct.product.name.length === 0 && $scope.newProduct.product.price.length === 0 && !isNaN($scope.newProduct.product.price)) {
 			$scope.inputValidationName = true;
 			$scope.InputValidationPrice = true;
+			//$scope.InputValidationPriceNaN = true;
 			return;
 		}
 		else if($scope.newProduct.product.name.length === 0) {
 			$scope.inputValidationName = true;
 			$scope.InputValidationPrice = false;
+			$scope.InputValidationPriceNaN = false;
 			return;
 		}
 		else if($scope.newProduct.product.price.length === 0) {
 			$scope.inputValidationName = false;
 			$scope.InputValidationPrice = true;
+			$scope.InputValidationPriceNaN = false;
+			return;
+		}
+		else if(isNaN($scope.newProduct.product.price)) {
+			$scope.inputValidationName = false;
+			$scope.InputValidationPrice = false;
+			$scope.InputValidationPriceNaN = true;
 			return;
 		}
 		else {

@@ -11,6 +11,7 @@
 		"Cancel":					 "Hætta Við",
 		"ValidationFailedName":		 "Vinsamlegast sláðu inn nafn á vöru.",
 		"ValidationFailedPrice":	 "Vinsamlegast sláðu inn verð á vöru.",
+		"ValidationFailedPriceNaN":	 "Vinsamlegast sláðu inn verð á vöru í tölustöfum.",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",

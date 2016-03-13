@@ -12,6 +12,9 @@
 <div class="well errormsg" ng-show="InputValidationPrice">
 	<label translate="sellersDlgDetail.ValidationFailedPrice"></label>
 </div>
+<div class="well errormsg" ng-show="InputValidationPriceNaN">
+	<label translate="sellersDlgDetail.ValidationFailedPriceNaN"></label>
+</div>
 <!--<label translate="sellersDlgDetail.Img"></label>-->
 <input type="text" ng-model="newProduct.product.imagePath" placeholder="{{ 'sellersDlg.Img' | translate }}" class="form-control" />
 <br>
