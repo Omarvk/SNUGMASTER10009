@@ -9,6 +9,8 @@
 		"QuantityInStock":			 "Quantity in stock",
 		"Ok":						 "Ok",
 		"Cancel":					 "Cancel",
+		"ValidationFailedName":		 "Please enter a product name.",
+		"ValidationFailedPrice":	 "Please enter a product price.",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",

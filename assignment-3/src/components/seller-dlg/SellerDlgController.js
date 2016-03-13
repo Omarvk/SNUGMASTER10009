@@ -17,12 +17,19 @@ function SellerDlgController($scope, modalParam) {
 	}
 	
 	$scope.onOk = function onOk() {
-		if($scope.seller.name.length === 0){
-			$scope.Input-validation-name = true;
+		if($scope.seller.name.length === 0 && $scope.seller.category.length === 0){
+			$scope.InputValidationName = true;
+			$scope.InputValidationCategory = true;
 			return;
 		}
-		if($scope.seller.category.length === 0) {
-			$scope.Input-validation-category = true;
+		else if($scope.seller.name.length === 0) {
+			$scope.InputValidationName = true;
+			$scope.InputValidationCategory = false;
+			return;
+		}
+		else if($scope.seller.category.length === 0) {
+			$scope.InputValidationName = false;
+			$scope.InputValidationCategory = true;
 			return;
 		}
 		else {

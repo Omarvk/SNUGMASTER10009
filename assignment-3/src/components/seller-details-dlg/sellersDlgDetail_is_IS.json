@@ -9,6 +9,8 @@
 		"QuantityInStock":			 "Eintök til",
 		"Ok":						 "Staðfesta",
 		"Cancel":					 "Hætta Við",
+		"ValidationFailedName":		 "Vinsamlegast sláðu inn nafn á vöru.",
+		"ValidationFailedPrice":	 "Vinsamlegast sláðu inn verð á vöru.",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",

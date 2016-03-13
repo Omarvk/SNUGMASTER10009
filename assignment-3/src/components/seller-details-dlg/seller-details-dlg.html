@@ -3,9 +3,15 @@
 <input type="text" ng-model="newProduct.product.name" placeholder="{{ 'sellersDlg.Name' | translate }}" class="form-control" />
 <!-- validation og meira fun -->
 <br>
+<div class="well errormsg" ng-show="inputValidationName">
+	<label translate="sellersDlgDetail.ValidationFailedName"></label>
+</div>
 <!--<label translate="sellersDlgDetail.Price"></label>-->
 <input type="text" ng-model="newProduct.product.price" placeholder="{{ 'sellersDlgDetail.Price' | translate }}" class="form-control" />
 <br>
+<div class="well errormsg" ng-show="InputValidationPrice">
+	<label translate="sellersDlgDetail.ValidationFailedPrice"></label>
+</div>
 <!--<label translate="sellersDlgDetail.Img"></label>-->
 <input type="text" ng-model="newProduct.product.imagePath" placeholder="{{ 'sellersDlg.Img' | translate }}" class="form-control" />
 <br>

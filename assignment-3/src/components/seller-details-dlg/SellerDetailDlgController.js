@@ -23,11 +23,22 @@ function SellerDetailDlgController($scope, $routeParams, modalParam) {
 	}
 	
 	$scope.onOk = function onOk() {
-		// TODO: VALIDATIOON!! BANK
-		if($scope.newProduct.product.name.length === 0) {
-			//birta valdiation skilaboð!!!
+		if($scope.newProduct.product.name.length === 0 && $scope.newProduct.product.price.length === 0) {
+			$scope.inputValidationName = true;
+			$scope.InputValidationPrice = true;
 			return;
-		}else {
+		}
+		else if($scope.newProduct.product.name.length === 0) {
+			$scope.inputValidationName = true;
+			$scope.InputValidationPrice = false;
+			return;
+		}
+		else if($scope.newProduct.product.price.length === 0) {
+			$scope.inputValidationName = false;
+			$scope.InputValidationPrice = true;
+			return;
+		}
+		else {
 			$scope.$close($scope.newProduct);
 		}
 		
