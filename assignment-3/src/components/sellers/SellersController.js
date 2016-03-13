@@ -25,7 +25,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 
 	};
 	$scope.onEditSeller = function onEditSeller() {
-		centrisNotify.success("veldur notanda sem þú vilt edita með klikki!");
+		centrisNotify.success("Veldu notanda sem þú vilt breyta.");
 		$scope.edited = true;
 	};
 
