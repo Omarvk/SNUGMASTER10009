@@ -35,7 +35,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 				//toastr.success("tókst", "bæta við!");
 				centrisNotify.success("sellers.Messages.UpdateSucceeded", "sellers.Edit");
 			}).error(function() {
-				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
+				centrisNotify.error("sellers.Messages.UpdateFailed"); // json skráinn
 			});
 		});	
 		$scope.edited = false;

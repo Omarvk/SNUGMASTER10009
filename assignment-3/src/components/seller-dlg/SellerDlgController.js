@@ -2,7 +2,7 @@
 
 angular.module("project3App").controller("SellerDlgController", 
 function SellerDlgController($scope, modalParam) {
-	var sellerObj = modalParam.seller;
+	var sellerObj = modalParam;
 	if(sellerObj === undefined) {
 		$scope.title = "sellersDlg.Title";
 		$scope.seller = {
@@ -27,7 +27,9 @@ function SellerDlgController($scope, modalParam) {
 		
 	};
 	$scope.onCancel = function onCancel() {
-		$scope.$dismiss(sellerObj);
+		//$scope.$dismiss('cancel');
+		$scope.$dismiss('cancel');
+		//$modalInstance.dismiss('cancel');
 	};
 
 });

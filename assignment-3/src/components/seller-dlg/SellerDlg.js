@@ -9,9 +9,7 @@ function SellerDlg ($uibModal) {
 				controller: "SellerDlgController",
 				resolve: {
 					modalParam: function() {
-						return {
-							seller: seller
-						};
+						return seller;
 					}
 				}
 			});

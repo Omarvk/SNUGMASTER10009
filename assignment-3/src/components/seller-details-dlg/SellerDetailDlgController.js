@@ -12,8 +12,8 @@ function SellerDetailDlgController($scope, $routeParams, modalParam) {
 				id: "",
 				name: "",
 				price: "",
-				quantitySold: "",
-				quantityInStock: "",
+				quantitySold: 0,
+				quantityInStock: 0,
 				imagePath: ""
 			}
 		};
