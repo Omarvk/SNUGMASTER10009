@@ -31,6 +31,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 
 	$scope.getSeller = function getSeller(seller) {
 		SellerDlg.show(seller).then(function(seller) {
+			
 			AppResource.updateSeller(Number(seller.id), seller).success(function(seller) {
 				//toastr.success("tókst", "bæta við!");
 				centrisNotify.success("sellers.Messages.UpdateSucceeded", "sellers.Edit");

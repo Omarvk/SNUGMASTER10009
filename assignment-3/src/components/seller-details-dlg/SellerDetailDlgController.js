@@ -2,7 +2,7 @@
 
 angular.module("project3App").controller("SellerDetailDlgController", 
 function SellerDetailDlgController($scope, $routeParams, modalParam) {
-	var productObj = modalParam.product;
+	var productObj = modalParam;
 	$scope.newProduct = {};
 	if(productObj === undefined) {
 		$scope.title = "sellersDlgDetail.Title";
@@ -53,7 +53,6 @@ function SellerDetailDlgController($scope, $routeParams, modalParam) {
 		
 	};
 	$scope.onCancel = function onCancel() {
-		$scope.newProduct = productObj;
 		$scope.$dismiss();
 	};
 

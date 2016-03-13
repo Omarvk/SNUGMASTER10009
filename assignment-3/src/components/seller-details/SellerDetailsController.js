@@ -30,7 +30,8 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
  	$scope.onEditProduct = function onEditProduct(product) {
 		SellerDetailDlg.show(product).then(function(newProduct) {
 			AppResource.updateProduct(newProduct.product.id, newProduct.product).success(function(product) {
-				centrisNotify.success("sellerdetails.Messages.UpdateSucceeded", product.id);
+				//$rootScope.$broadcast('editProduct');
+				centrisNotify.success("sellerdetails.Messages.UpdateSucceeded");
 			}).error(function() {
 				centrisNotify.error("sellerdetails.Messages.SaveFailed"); // json skráinn
 			});

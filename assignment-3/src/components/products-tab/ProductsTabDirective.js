@@ -7,18 +7,27 @@ function productTab(AppResource, $routeParams) {
 		restrict: "E",
 		templateUrl: "components/products-tab/productsTab.html",
 		link: function(scope, element, attrs) {
-			scope.$on('addProduct', function(event, newProducts){
+			scope.$on('addProduct', function(event, newProducts) {
 				//console.log(newProducts + " tesds");
 				scope.products.push(newProducts);
 			});
 			var id = $routeParams.id;
-			AppResource.getSellerProducts(Number(id)).success(function(products) {
-				scope.products = products;
-			}).error(function() {
-				// error
-			});
+
+			var getProducts = function getProducts() {
+				AppResource.getSellerProducts(Number(id)).success(function(products) {
+					scope.products = products;
+				}).error(function() {
+					// error
+				});
+			};
+			getProducts();
+			/*scope.$on('editProduct', function() {
+				console.log(" tessddsds");
+				scope.products = [];
+				getProducts();
+			});*/
 		}
-		//scope: {}; // þitt scope  name: "@" til að ná í scope úr controller
+		
 	};
 }]);
 
