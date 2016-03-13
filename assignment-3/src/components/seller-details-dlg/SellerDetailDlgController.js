@@ -33,6 +33,7 @@ function SellerDetailDlgController($scope, $routeParams, modalParam) {
 		
 	};
 	$scope.onCancel = function onCancel() {
+		$scope.newProduct = productObj;
 		$scope.$dismiss();
 	};
 

@@ -27,7 +27,7 @@ function SellerDlgController($scope, modalParam) {
 		
 	};
 	$scope.onCancel = function onCancel() {
-		$scope.$dismiss();
+		$scope.$dismiss(sellerObj);
 	};
 
 });

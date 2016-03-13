@@ -7,6 +7,10 @@ function productTab(AppResource, $routeParams) {
 		restrict: "E",
 		templateUrl: "components/products-tab/productsTab.html",
 		link: function(scope, element, attrs) {
+			scope.$on('addProduct', function(event, newProducts){
+				//console.log(newProducts + " tesds");
+				scope.products.push(newProducts);
+			});
 			var id = $routeParams.id;
 			AppResource.getSellerProducts(Number(id)).success(function(products) {
 				scope.products = products;

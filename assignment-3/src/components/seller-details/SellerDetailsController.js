@@ -1,9 +1,10 @@
 "use strict";
 
 angular.module("project3App").controller("SellerDetailsController",
-["$scope", "$routeParams", "AppResource", "centrisNotify", "SellerDetailDlg",
-function SellerDetailsController($scope, $routeParams, AppResource, centrisNotify, SellerDetailDlg) {
+["$scope", "$routeParams", "AppResource", "centrisNotify", "SellerDetailDlg", "$rootScope",
+function SellerDetailsController($scope, $routeParams, AppResource, centrisNotify, SellerDetailDlg, $rootScope) {
 	var id = $routeParams.id;
+	//$scope.products = [];
 	$scope.tabs = true;
 	AppResource.getSellerDetails(Number(id)).success(function(seller){
 		$scope.id = seller.id;
@@ -18,8 +19,9 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 		SellerDetailDlg.show().then(function(newProduct) {
 			AppResource.addSellerProduct(newProduct.sId, newProduct.product).success(function(product) {
 				centrisNotify.success("sellerdetails.Messages.SaveSucceeded","sellerdetails.Add");
-				$scope.products.push(product);
-				// TODO: BÆTA VIÐ SELJANDA í listann
+				$rootScope.$broadcast('addProduct', product);
+				//$scope.products.push(product);
+					// TODO: BÆTA VIÐ SELJANDA í listann
 			}).error(function() {
 				centrisNotify.error("sellerdetails.Messages.SaveFailed"); // json skráinn
 			});
