@@ -14,7 +14,6 @@ function productTop(AppResource, $routeParams) {
 					for(var i = 0; i < products.length; i++) {
 						topTen.push([products[i], products[i].quantitySold]);
 					}
-					//console.log(topTen.products + " asda");
 					topTen.sort(function(t1, t2) {
 						return t2[1] - t1[1] || t1[0] - t2[0];
 					});

@@ -4,16 +4,10 @@
 		"EditTitle":				 "Edit seller",
 		"Name":                      "Name",
 		"Category":					 "Category",
-		"Add":						 "Add",
 		"Img":						 "Image",
 		"Ok":						 "Ok",
 		"Cancel":					 "Cancel",
 		"ValidationFailedName":		 "Please enter a seller name.",
-		"ValidationFailedCategory":	 "Please enter a seller category.",
-		"Messages" : {
-			"LoadFailed":               "Failed to load the list of sellers",
-			"SaveSucceeded":            "The seller has been added successfully",
-			"SaveFailed":               "Unfortunately we could not add a new seller"
-		}
+		"ValidationFailedCategory":	 "Please enter a seller category."
 	}
 }

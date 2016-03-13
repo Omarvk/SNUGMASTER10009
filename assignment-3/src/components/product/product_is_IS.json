@@ -3,16 +3,8 @@
 		"Name":						 "Nafn:",
 		"Price":					 "Verð:",
 		"Category":					 "Flokkur:",
-		"Add":						 "Bæta við",
 		"Img":						 "Mynd",
 		"QuantitySold":				 "Fjöldi seldur:",
-		"QuantityInStock":			 "Fjöldi til:",
-		"Ok":						 "Staðfesta",
-		"Cancel":					 "Hætta við",
-		"Messages" : {
-			"LoadFailed":            "Ekki tókst að sækja lista yfir vörur",
-			"SaveSucceeded":         "Nýrri vöru hefur verið bætt við",
-			"SaveFailed":            "Því miður tókst ekki að bæta við nýrri vöru"
-		}
+		"QuantityInStock":			 "Fjöldi til:"
 	}
 }

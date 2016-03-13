@@ -3,16 +3,8 @@
 		"Name":                      "Name: ",
 		"Price":					 "Price: ",
 		"Category":					 "Category: ",
-		"Add":						 "Add",
 		"Img":						 "Images",
 		"QuantitySold":				 "Quantity sold: ",
-		"QuantityInStock":			 "Quantity in stock: ",
-		"Ok":						 "Ok",
-		"Cancel":					 "Cancel",
-		"Messages" : {
-			"LoadFailed":            "Failed to load the list of products",
-			"SaveSucceeded":         "The product has been added successfully",
-			"SaveFailed":            "Unfortunately we could not add a new product"
-		}
+		"QuantityInStock":			 "Quantity in stock: "
 	}
 }

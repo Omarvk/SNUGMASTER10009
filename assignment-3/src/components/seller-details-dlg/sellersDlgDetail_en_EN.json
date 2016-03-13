@@ -11,11 +11,6 @@
 		"Cancel":					 "Cancel",
 		"ValidationFailedName":		 "Please enter a product name.",
 		"ValidationFailedPrice":	 "Please enter a product price.",
-		"ValidationFailedPriceNaN":	 "Please enter a product price in integers.",
-		"Messages" : {
-			"LoadFailed":            "Failed to load the list of sellers",
-			"SaveSucceeded":         "The seller has been added successfully",
-			"SaveFailed":            "Unfortunately we could not add a new seller"
-		}
+		"ValidationFailedPriceNaN":	 "Please enter a product price in integers."
 	}
 }

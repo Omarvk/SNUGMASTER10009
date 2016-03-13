@@ -1,10 +1,5 @@
 {
 	"shared" : {
-		"LoadingMessage":            "Hlaða inn",
-		"Messages" : {
-			"LoadFailed":            "Ekki tókst að sækja lista yfir vörur",
-			"SaveSucceeded":         "Nýjum vörum hefur verið bætt við",
-			"SaveFailed":            "Því miður tókst ekki að bæta við nýjum vöru"
-		}
+		"LoadingMessage":            "Hlaða inn"
 	}
 }

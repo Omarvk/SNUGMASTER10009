@@ -6,7 +6,23 @@ function productTab(AppResource, $routeParams) {
 	return {
 		restrict: "E",
 		templateUrl: "components/products-tab/productsTab.html",
-		link: function(scope, element, attrs) {
+		controller: function($scope) {
+			var id = $routeParams.id;
+			var getProducts = function getProducts() {
+				AppResource.getSellerProducts(Number(id)).success(function(products) {
+					$scope.products = products;
+				}).error(function() {
+					// error
+				});
+			};
+			getProducts();
+			$scope.$on('addProduct', function(event, newProducts) {
+				//console.log(newProducts + " tesds");
+				$scope.products.push(newProducts);
+			});
+
+		}
+		/*link: function(scope, element, attrs) {
 			scope.$on('addProduct', function(event, newProducts) {
 				//console.log(newProducts + " tesds");
 				scope.products.push(newProducts);
@@ -25,8 +41,8 @@ function productTab(AppResource, $routeParams) {
 				console.log(" tessddsds");
 				scope.products = [];
 				getProducts();
-			});*/
-		}
+			});
+		}*/
 		
 	};
 }]);
