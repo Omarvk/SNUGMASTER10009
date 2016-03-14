@@ -11,13 +11,14 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 		$scope.isLoading = false;
 	}).error(function()	{
 		$scope.isLoading = false;
+		centrisNotify.error("sellers.Messages.LoadFailed");
 	});
 
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller) {
 			AppResource.addSeller(seller).success(function(seller) {
 				//toastr.success("tókst", "bæta við!");
-				centrisNotify.success("sellers.Messages.SaveSucceeded","sellers.Add");
+				centrisNotify.success("sellers.Messages.SaveSucceeded");
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
 			});
@@ -34,7 +35,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 			
 			AppResource.updateSeller(Number(seller.id), seller).success(function(seller) {
 				//toastr.success("tókst", "bæta við!");
-				centrisNotify.success("sellers.Messages.UpdateSucceeded", "sellers.Edit");
+				centrisNotify.success("sellers.Messages.UpdateSucceeded");
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.UpdateFailed"); // json skráinn
 			});
