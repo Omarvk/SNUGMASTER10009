@@ -5,6 +5,7 @@
 		"Category":					 "Flokkur:",
 		"Img":						 "Mynd",
 		"QuantitySold":				 "Fjöldi seldur:",
-		"QuantityInStock":			 "Fjöldi til:"
+		"QuantityInStock":			 "Fjöldi til:",
+		"Edit":						 "Smelltu á vöru til að breyta henni."
 	}
 }

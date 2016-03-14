@@ -1,8 +1,8 @@
 "use strict";
 
 angular.module("project3App").directive("productTab", 
-["AppResource", "$routeParams",
-function productTab(AppResource, $routeParams) {
+["AppResource", "$routeParams", "centrisNotify", "SellerDetailDlg",
+function productTab(AppResource, $routeParams, centrisNotify, SellerDetailDlg) {
 	return {
 		restrict: "E",
 		templateUrl: "components/products-tab/productsTab.html",
@@ -12,7 +12,7 @@ function productTab(AppResource, $routeParams) {
 				AppResource.getSellerProducts(Number(id)).success(function(products) {
 					$scope.products = products;
 				}).error(function() {
-					// error
+					centrisNotify.error("sellerdetails.Messages.LoadFailed"); // json skráinn
 				});
 			};
 			getProducts();
@@ -20,30 +20,7 @@ function productTab(AppResource, $routeParams) {
 				//console.log(newProducts + " tesds");
 				$scope.products.push(newProducts);
 			});
-
 		}
-		/*link: function(scope, element, attrs) {
-			scope.$on('addProduct', function(event, newProducts) {
-				//console.log(newProducts + " tesds");
-				scope.products.push(newProducts);
-			});
-			var id = $routeParams.id;
-
-			var getProducts = function getProducts() {
-				AppResource.getSellerProducts(Number(id)).success(function(products) {
-					scope.products = products;
-				}).error(function() {
-					// error
-				});
-			};
-			getProducts();
-			/*scope.$on('editProduct', function() {
-				console.log(" tessddsds");
-				scope.products = [];
-				getProducts();
-			});
-		}*/
-		
 	};
 }]);
 

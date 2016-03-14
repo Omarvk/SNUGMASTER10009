@@ -9,6 +9,7 @@
 		"Pick":						 "Pick",
 		"Img":						 "Images",
 		"Messages" : {
+			"PickUser":				 "Pick seller that you would like to edit",
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",
 			"SaveFailed":            "Unfortunately we could not add a new seller",

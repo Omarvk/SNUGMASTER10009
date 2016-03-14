@@ -5,6 +5,7 @@
 		"Category":					 "Category: ",
 		"Img":						 "Images",
 		"QuantitySold":				 "Quantity sold: ",
-		"QuantityInStock":			 "Quantity in stock: "
+		"QuantityInStock":			 "Quantity in stock: ",
+		"Edit":						 "Click on product to edit it"
 	}
 }

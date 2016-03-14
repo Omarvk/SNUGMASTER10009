@@ -25,7 +25,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 
 	};
 	$scope.onEditSeller = function onEditSeller() {
-		centrisNotify.success("Veldu notanda sem þú vilt breyta.");
+		centrisNotify.success("sellers.Messages.PickUser");
 		$scope.edited = true;
 	};
 
