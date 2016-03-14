@@ -11,6 +11,7 @@
 			"SaveSucceeded":         "Nýjum vörum hefur verið bætt við",
 			"SaveFailed":            "Því miður tókst ekki að bæta við nýjum vöru",
 			"UpdateSucceeded":		 "Það tókst að uppfæra upplýsinga vöru",
+			"NoProduct":			 "Engar vörur fundust fyrir seljanda.",
 			"UpdateFailed":			 "Ekki tókst að uppfæra upplýsinga vöru"
 		}
 	}
