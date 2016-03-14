@@ -20,20 +20,6 @@ describe("SellersController should be unit tested here", function() {
 			return "seller does not exists";
 		}
 	};
-	/*var fakeModal = {
-		result: {
-			then: function(ok, cancel) {
-				this.ok = ok;
-				this.cancel = cancel;
-			}
-		},
-		close: function(data) {
-			this.result.then(data, "");
-		},
-		dismiss: function(reason) {
-			this.result.then("" ,reason);
-		}
-	};*/
 
 	beforeEach(module("project3App"));
 
@@ -60,24 +46,38 @@ describe("SellersController should be unit tested here", function() {
 	});
 
 	it("getSellers should have data", inject(function(AppResource){
-		var sellers = AppResource.getSellers();
-		expect(sellers).not.toBeNull();
+		var getSellers;
+		AppResource.getSellers().success(function(sellers){
+			getSellers = sellers;
+		});
+		var test = scope.sellers;
+		expect(getSellers).not.toBeNull();
+		expect(test).toEqual(getSellers);
 	}));
 
-	it("addSeller should contains user in getSellers", inject(function(AppResource){
-		scope.onAddSeller();
+	it("getSeller Error should notify", inject(function(AppResource, centrisNotify){
+		spyOn(centrisNotify, "error");
+		AppResource.successLoadSellers = false;
+		AppResource.getSellers().success(function() {
+		}).error(function() {
+			centrisNotify.error("Error");
+		});
+		expect(centrisNotify.error).toHaveBeenCalledWith("Error");
+
+	}));
+
+	it("addSeller should on success should notify", inject(function(AppResource, centrisNotify){
+		spyOn(centrisNotify, "success");
 		var seller = {
+			id: 1337,
 			name: "Halli",
 			category: "balli",
 			imagePath: ""
 		};
-		scope.$close = function(seller) {
-			AppResource.addSeller(seller).sucess(function(seller) {
-				expect(seller.name).toBe("Halli");
-				var sellers = AppResource.getSellers();
-				expect(sellers).toContain(seller);
-			});
-		};
+		AppResource.addSeller(seller).success(function(){
+			centrisNotify.success("new user");
+		});
+		expect(centrisNotify.success).toHaveBeenCalled();
 	}));
 
 	it("addSeller should contains user in getSellers", inject(function(AppResource){
@@ -91,10 +91,12 @@ describe("SellersController should be unit tested here", function() {
 		expect(addMockSeller(seller)).toBe(seller);
 	}));
 
-	it("on Edit Click", function() {
+	it("on Edit Click", inject(function(centrisNotify) {
+		//spyOn(centrisNotify, "success");
 		scope.onEditSeller();
 		expect(scope.edited).toBe(true);
-	});
+		//expect(centrisNotify).toHaveBeenCalled();
+	}));
 
 	it("on Edit then getSeller", inject(function(AppResource) {
 		var seller = {

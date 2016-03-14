@@ -9,6 +9,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 		$scope.isLoading = false;
 	}).error(function()	{
 		$scope.isLoading = false;
+		centrisNotify.error("sellers.Messages.LoadFailed");
 	});
 
 	$scope.onAddSeller = function onAddSeller() {
