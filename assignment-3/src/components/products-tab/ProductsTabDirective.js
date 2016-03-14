@@ -10,6 +10,9 @@ function productTab(AppResource, $routeParams, centrisNotify, SellerDetailDlg) {
 			var id = $routeParams.id;
 			var getProducts = function getProducts() {
 				AppResource.getSellerProducts(Number(id)).success(function(products) {
+					if(products.length === 0){
+						centrisNotify.error("Engar vörur fundust hjá þessum seljanda.");
+					}
 					$scope.products = products;
 				}).error(function() {
 					centrisNotify.error("sellerdetails.Messages.LoadFailed"); // json skráinn
@@ -22,5 +25,3 @@ function productTab(AppResource, $routeParams, centrisNotify, SellerDetailDlg) {
 		}
 	};
 }]);
-
-

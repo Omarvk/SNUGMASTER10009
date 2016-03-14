@@ -1,6 +1,6 @@
 <div class="well well-lg Product-details" ng-click="onEditProduct(p)" data-tooltip="{{ 'product.Edit' | translate }}" data-tooltip-position="right">
 	<div class="Product-details-img">
-		<img width="100" height="100" ng-src="{{p.imagePath}}" alt="Product image missing"></img>
+		<img width="100" height="100" ng-src="{{p.imagePath}}" alt="{{ 'product.ProductImg' | translate }}"></img>
 	</div>
 	<div class="Product-details-info">
 		<label translate="product.Name"></label>&nbsp{{p.name}}

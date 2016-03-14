@@ -6,6 +6,7 @@
 		"Img":						 "Images",
 		"QuantitySold":				 "Quantity sold: ",
 		"QuantityInStock":			 "Quantity in stock: ",
+		"ProductImg":				 "Product image missing. ",
 		"Edit":						 "Click on a product to edit."
 	}
 }

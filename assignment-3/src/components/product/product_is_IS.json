@@ -6,6 +6,7 @@
 		"Img":						 "Mynd",
 		"QuantitySold":				 "Fjöldi seldur:",
 		"QuantityInStock":			 "Fjöldi til:",
+		"ProductImg":				 "Mynd af vöru vantar ",
 		"Edit":						 "Smelltu á vöru til að breyta henni."
 	}
 }

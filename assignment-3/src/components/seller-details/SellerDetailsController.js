@@ -32,10 +32,4 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 			});
 		});
 	};
-
-
 }]);
-
-
-
-
