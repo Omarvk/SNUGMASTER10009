@@ -4,7 +4,6 @@ angular.module("project3App").controller("SellerDetailsController",
 ["$scope", "$routeParams", "AppResource", "centrisNotify", "SellerDetailDlg", "$rootScope",
 function SellerDetailsController($scope, $routeParams, AppResource, centrisNotify, SellerDetailDlg, $rootScope) {
 	var id = $routeParams.id;
-	//$scope.products = [];
 	$scope.tabs = true;
 	AppResource.getSellerDetails(Number(id)).success(function(seller){
 		$scope.id = seller.id;
@@ -12,7 +11,6 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 		$scope.category = seller.category;
 		$scope.img = seller.imagePath;
 	}).error(function()	{
-		//$scope.isLoading = false;
 		centrisNotify.error("sellerdetails.Messages.LoadFailed"); // json skráinn
 	});
 	$scope.onAddProduct = function onAddProduct() {
@@ -20,8 +18,6 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
 			AppResource.addSellerProduct(newProduct.sId, newProduct.product).success(function(product) {
 				centrisNotify.success("sellerdetails.Messages.SaveSucceeded","sellerdetails.Add");
 				$rootScope.$broadcast('addProduct', product);
-				//$scope.products.push(product);
-					// TODO: BÆTA VIÐ SELJANDA í listann
 			}).error(function() {
 				centrisNotify.error("sellerdetails.Messages.SaveFailed"); // json skráinn
 			});
@@ -30,7 +26,6 @@ function SellerDetailsController($scope, $routeParams, AppResource, centrisNotif
  	$scope.onEditProduct = function onEditProduct(product) {
 		SellerDetailDlg.show(product).then(function(newProduct) {
 			AppResource.updateProduct(newProduct.product.id, newProduct.product).success(function(product) {
-				//$rootScope.$broadcast('editProduct');
 				centrisNotify.success("sellerdetails.Messages.UpdateSucceeded");
 			}).error(function() {
 				centrisNotify.error("sellerdetails.Messages.SaveFailed"); // json skráinn

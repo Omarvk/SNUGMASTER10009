@@ -2,8 +2,6 @@
 
 angular.module("project3App").controller("SellersController",
 function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
-	// TODO: load data from AppResource! Also, add other methods, such as to
-	// add/update sellers etc.
 	$scope.isLoading = true;
 	$scope.edited = false;
 	AppResource.getSellers().success(function(sellers) {
@@ -16,7 +14,6 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller) {
 			AppResource.addSeller(seller).success(function(seller) {
-				//toastr.success("tókst", "bæta við!");
 				centrisNotify.success("sellers.Messages.SaveSucceeded","sellers.Add");
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.SaveFailed"); // json skráinn
@@ -33,7 +30,6 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 		SellerDlg.show(seller).then(function(seller) {
 			
 			AppResource.updateSeller(Number(seller.id), seller).success(function(seller) {
-				//toastr.success("tókst", "bæta við!");
 				centrisNotify.success("sellers.Messages.UpdateSucceeded", "sellers.Edit");
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.UpdateFailed"); // json skráinn

@@ -17,7 +17,6 @@ function productTab(AppResource, $routeParams, centrisNotify, SellerDetailDlg) {
 			};
 			getProducts();
 			$scope.$on('addProduct', function(event, newProducts) {
-				//console.log(newProducts + " tesds");
 				$scope.products.push(newProducts);
 			});
 		}

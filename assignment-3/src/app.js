@@ -16,10 +16,7 @@ function($routeProvider, $translateProvider) {
 		prefix: "lang_",
 		suffix: ".json"
 	});
-	//$translateProvider.preferredLanguage('is');
 	$translateProvider.use("is");
-	//moment.locale("is");
-	//$translate.use("is");
 }]);
 
 angular.module("project3App").run(function($rootScope, $translate) {
@@ -38,17 +35,3 @@ angular.module("project3App").run(function($rootScope, $translate) {
 		
 	};
 });
-
-/*
-angular.module("project3App").constant("LanguageCtrl", {
-	activeClass:'my-active-class'
-});
-var LanguageCtrl = function($scope, $translateProvider) {
-	$scope.onLang = function onLang() {
-		console.log("test");
-		$translateProvider.use("en");
-	};
-
-};
-*/
-//angular.module("pascalprecht.translate").factory("$translateStaticFilesLoader",["$q","$http",function(a,b){return function(c){if(!c||!angular.isString(c.prefix)||!angular.isString(c.suffix))throw new Error("Couldn't load static files, no prefix or suffix specified!");var d=a.defer();return b({url:[c.prefix,c.key,c.suffix].join(""),method:"GET",params:""}).success(function(a){d.resolve(a)}).error(function(){d.reject(c.key)}),d.promise}}]);
